@@ -11,6 +11,10 @@ class Player
 
   def has_lost?
     @has_lost = false
+    if @deck.cards.length == 0
+      @has_lost = true
+    end
+    @has_lost
   end
 
 end
