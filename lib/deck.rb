@@ -35,4 +35,9 @@ class Deck
   def remove_card
     @cards.shift
   end
+
+  def add_card(suit, value, rank)
+    new_card = Card.new(suit, value, rank)
+    @cards << new_card
+  end
 end
