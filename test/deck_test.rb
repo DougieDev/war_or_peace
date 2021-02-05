@@ -36,4 +36,11 @@ class DeckTest < Minitest::Test
     assert_equal 66.67, @deck.percent_high_ranking
   end
 
+  def test_remove_card_method
+    @deck.remove_card
+
+    assert_equal 2, @cards.length
+    assert_equal :spade, @deck.cards[0].suit
+  end
+
 end
