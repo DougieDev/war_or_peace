@@ -41,6 +41,8 @@ class DeckTest < Minitest::Test
 
     assert_equal 2, @cards.length
     assert_equal :spade, @deck.cards[0].suit
+    assert_equal 1, @deck.high_ranking_cards.length
+    assert_equal 50.0, @deck.percent_high_ranking
   end
 
 end
