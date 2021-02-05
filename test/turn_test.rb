@@ -13,6 +13,9 @@ class TurnTest < Minitest::Test
     @card4 = Card.new(:diamond, 'Jack', 11)
     @card5 = Card.new(:heart, '8', 8)
     @card6 = Card.new(:diamond, 'Queen', 12)
+    @card7 = Card.new(:heart, '3', 3)
+    @card8 = Card.new(:diamond, '2', 2)
+
 
     @cards1 = [@card1, @card2, @card5, @card8]
     @cards2 = [@card3, @card4, @card6, @card7]
@@ -37,6 +40,10 @@ class TurnTest < Minitest::Test
 
   def test_spoils_of_war_is_empty_by_default
     assert_equal [], @turn.spoils_of_war
+  end
+
+  def test_type
+    assert_equal :basic, @turn.type
   end
 
 end
