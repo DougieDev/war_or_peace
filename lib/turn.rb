@@ -29,7 +29,7 @@ class Turn
         return @player2
       end
     elsif type == :war
-      if @player1.deck.card[2].rank > @player2.deck.cards[2].rank
+      if @player1.deck.cards[2].rank > @player2.deck.cards[2].rank
         return @player1
       else
         return @player2
